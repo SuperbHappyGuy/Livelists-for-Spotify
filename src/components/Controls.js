@@ -1,9 +1,8 @@
-const Controls = ({title}) => {
-    console.log(title);
+const Controls = ({selectedTitle}) => {
+    
     return (
         <>
-            <p>{title}</p>
-            <p>test</p>
+            <p>{selectedTitle}</p>;
         </>
     )
 }
