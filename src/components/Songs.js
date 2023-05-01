@@ -1,7 +1,7 @@
 import Search from "./Search";
 import Song from "./Song";
 
-const Songs = ({playlist, titles}) => {
+const Songs = ({playlist, titles, handleSearch}) => {
     return (
         <div className="songs">
             <p>{playlist}</p>

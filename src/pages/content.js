@@ -58,14 +58,20 @@ const Content = () => {
     ]
     const playlistNames = playlists.map(playlist => playlist.name);
     const [selectedPlaylistTitle, setSelectedPlaylistTitle] = useState("Select a playlist");
+
     const selectedPlaylist = playlists.find(playlist => playlist.name === selectedPlaylistTitle);
     const songNames = selectedPlaylist ? selectedPlaylist.tracks.map(track => track.song) : [];
 
+    const[searchedItem, setSearchedItem] = useState("");
 
     const handlePlaylistClick = (title) => {
           setSelectedPlaylistTitle(title);
           console.log("clicked");
       };
+
+      const handleSearch = () => {
+        setSearchedItem();
+      }
     return (
       <>
         <Playlists titles={playlistNames} onPlayListClick={handlePlaylistClick}/>

@@ -1,7 +1,7 @@
 const Song = ({title}) => {
     return (
         <>
-            <button className="song-button">{title}</button>
+            <button className="song-button">{title} <button>X</button></button>
         </>
     )
 }
