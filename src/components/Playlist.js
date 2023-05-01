@@ -1,7 +1,7 @@
-const Playlist = ({title}) => {
+const Playlist = ({title, onClick}) => {
     return (
         <>
-            <button className="playlist-button">{title}</button>
+            <button className="playlist-button" onClick={onClick}>{title}</button>
         </>
     )
 }

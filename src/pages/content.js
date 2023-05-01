@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Playlists from "../components/Playlists";
-import Controls from "@/components/Controls";
-import Controler from "@/components/Controler";
+import Songs from "@/components/Songs";
 
 const Content = () => {
     let playlists = [
@@ -57,18 +56,17 @@ const Content = () => {
         }
     ]
     const playlistNames = playlists.map(playlist => playlist.name);
-    const [selectedPlaylistTitle, setSelectedPlaylistTitle] = useState("");
+    const [selectedPlaylistTitle, setSelectedPlaylistTitle] = useState("Select a playlist");
 
     const handlePlaylistClick = (title) => {
           setSelectedPlaylistTitle(title);
-          console.log(selectedPlaylistTitle);
+          console.log("clicked");
       };
     return (
       <>
         <p>Content</p>
-        <Playlists titles={playlistNames} onPlaylistClick={handlePlaylistClick}/>
-        <Controls title={selectedPlaylistTitle}/>
-        <Controler/>
+        <Playlists titles={playlistNames} onPlayListClick={handlePlaylistClick}/>
+        <Songs playlist={selectedPlaylistTitle}/>
       </>
     )
   }

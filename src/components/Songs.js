@@ -1,14 +1,10 @@
 import Song from "./Song";
 
-const Songs = ({titles}) => {
+const Songs = ({playlist}) => {
     return (
         <div className="playlists">
+            <p>{playlist}</p>
             <input/>
-            {
-                titles.map((title) => (
-                    <Song key={title} title={title}/>
-                ))
-            }
         </div>
     )
 }
