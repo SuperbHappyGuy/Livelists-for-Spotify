@@ -1,9 +1,12 @@
-const Controls = ({selectedTitle}) => {
+import Controler from "./Controler";
+
+const Controls = ({title}) => {
     
     return (
-        <>
-            <p>{selectedTitle}</p>;
-        </>
+        <div>
+            <p>{title}</p>
+            <Controler/>
+        </div>
     )
 }
 export default Controls;

@@ -1,10 +1,16 @@
+import Search from "./Search";
 import Song from "./Song";
 
-const Songs = ({playlist}) => {
+const Songs = ({playlist, titles}) => {
     return (
-        <div className="playlists">
+        <div className="songs">
             <p>{playlist}</p>
-            <input/>
+            <Search/>
+            {
+                titles.map((title) => (
+                    <Song key={title} title={title}/>
+                ))
+            }
         </div>
     )
 }

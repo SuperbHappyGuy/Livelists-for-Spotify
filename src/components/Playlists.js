@@ -1,10 +1,11 @@
 import Playlist from "./Playlist";
+import Search from "./Search";
 
 const Playlists = ({titles, onPlayListClick}) => {
     return (
         <div className="playlists">
             <p>Playlists</p>
-            <input/>
+            <Search/>
             {
                 titles.map((title) => (
                     <Playlist key={title} title={title} onClick={() => onPlayListClick(title)}/>
